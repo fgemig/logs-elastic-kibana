@@ -1,7 +1,7 @@
-# Gest„o de Logs com Elasticsearch e Kibana
+# Gest√£o de Logs com Elasticsearch e Kibana
 
-## PrÈ-requisitos
-Para executar o projeto È necess·rio ter as ferramentas abaixo instaladas:
+## Pr√©-requisitos
+Para executar o projeto √© necess√°rio ter as ferramentas abaixo instaladas:
 - Docker ou Rancher;
 - Docker Compose;
 - Visual Studio (opcional);
@@ -9,19 +9,21 @@ Para executar o projeto È necess·rio ter as ferramentas abaixo instaladas:
 
 ## Executando o projeto
 Para executar o projeto, siga os passos abaixo:
-1. Clone o repositÛrio;
-2. Gere uma chave de 32 bytes pelo (https://cyberchef.org/) e atualize a vari·vel KIBANA_ENCRYPTIONKEY no arquivo .env;
+1. Clone o reposit√≥rio;
+2. Gere uma chave de 32 bytes pelo (https://cyberchef.org/) e atualize a vari√°vel KIBANA_ENCRYPTIONKEY no arquivo .env;
 3. Abra o terminal na pasta do projeto;
 4. Execute o comando `docker-compose up -d`;
 6. Execute o projeto de exemplo em `src/LogExample`;
-7. FaÁa uma requisiÁ„o em cada um dos endpoints para gerar logs de exemplo;
+7. Fa√ßa uma requisi√ß√£o em cada um dos endpoints para gerar logs de exemplo;
 
-## ConfiguraÁ„o do Kibana
+## Configura√ß√£o do Kibana
 1. Acesse o Kibana em `http://localhost:5601`;
-2. Navegue atÈ `Stack Management` atravÈs do menu lateral;
-3. Em `Management > Index Management`, verifique se a chave `logs-api` consta na lista de Ìndices;
-4. Navegue atÈ `Analytics > Discover` atravÈs do menu lateral;
+2. Navegue at√© `Stack Management` atrav√©s do menu lateral;
+3. Em `Management > Index Management`, verifique se a chave `logs-api` consta na lista de √≠ndices;
+4. Navegue at√© `Analytics > Discover` atrav√©s do menu lateral;
 5. Crie um novo Data View;
 6. Em `Index pattern`, preencha com o valor `logs-api*`;
-1. Em `Time field`, selecione a opÁ„o `@timestamp`;
+1. Em `Time field`, selecione a op√ß√£o `@timestamp`;
 1. Clique em `Save data view to Kibana`;
+
+![](Dashboard.png)
